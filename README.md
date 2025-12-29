@@ -1,73 +1,226 @@
-# Welcome to your Lovable project
+🟢 JANMITRA
+An AI-Powered, Voice-First Civic & Legal Assistant for India
 
-## Project info
+“Because governance works best when it begins with listening.”
 
-**URL**: https://lovable.dev/projects/e0653219-86f9-4c3d-b97f-294d46458d10
+📌 Overview
 
-## How can I edit this code?
+JANMITRA is a software-only, AI-powered, multilingual civic assistance platform designed to help citizens understand their rights, access verified legal information, and report grievances anonymously using voice or text.
 
-There are several ways of editing your application.
+Built specifically for the Indian context, Janmitra eliminates barriers like language, literacy, fear, and complexity by providing a voice-first interface backed by trusted public datasets such as the Indian Penal Code (IPC) and government open data portals.
 
-**Use Lovable**
+This project was developed as part of a national-level hackathon / student innovation forum, focusing on real-world problem solving, governance, and social impact.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e0653219-86f9-4c3d-b97f-294d46458d10) and start prompting.
+🎯 Problem Statement
 
-Changes made via Lovable will be committed automatically to this repo.
+Millions of civic and legal issues in India go unreported or unresolved due to:
 
-**Use your preferred IDE**
+Lack of awareness about legal rights
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Language and literacy barriers
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Fear of retaliation
 
-Follow these steps:
+Complex and fragmented grievance systems
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Poor accessibility of existing digital portals
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Citizens often don’t know what law applies, where to complain, or how to even begin.
 
-# Step 3: Install the necessary dependencies.
-npm i
+💡 Solution
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Janmitra acts as a digital friend of the people by offering:
 
-**Edit a file directly in GitHub**
+🗣️ Voice-first interaction in regional languages
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+⚖️ IPC-backed legal guidance from verified sources
 
-**Use GitHub Codespaces**
+🕵️ Anonymous grievance reporting for sensitive issues
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🤖 AI-based validation to reduce fake or duplicate cases
 
-## What technologies are used for this project?
+🌐 Software-only architecture (no IoT or hardware dependency)
 
-This project is built with:
+✨ Key Features
+🔹 Multilingual AI Assistant (Speech-to-Speech)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Users can speak their problem in their local language
 
-## How can I deploy this project?
+The AI converts speech → text → processes → replies in spoken form
 
-Simply open [Lovable](https://lovable.dev/projects/e0653219-86f9-4c3d-b97f-294d46458d10) and click on Share -> Publish.
+Supports regional languages (Hindi, Telugu, Tamil, etc.)
 
-## Can I connect a custom domain to my Lovable project?
+🔹 IPC & Government Data–Backed Responses
 
-Yes, you can!
+Answers are grounded in:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Indian Penal Code (IPC)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Government schemes and grievance portals
+
+Every response is informational, not advisory, with source transparency
+
+🔹 Anonymous Reporting System
+
+No personal identity required
+
+Supports sensitive complaints like harassment or corruption
+
+Generates structured complaint drafts automatically
+
+🔹 AI-Based Report Validation
+
+Duplicate and spam detection
+
+Credibility scoring (without identity)
+
+Pattern clustering for high-confidence issues
+
+🔹 Scalable Software Architecture
+
+Web-based platform
+
+Lightweight backend
+
+Designed for integration with NGOs or government dashboards
+
+🛠️ Tech Stack
+Frontend
+
+Bolt (UI development)
+
+HTML / CSS / JavaScript
+
+Voice input interface
+
+Backend
+
+Python (Flask) – API & application logic
+
+RESTful architecture
+
+AI & NLP
+
+Speech-to-Text: VOSK (open-source, offline capable)
+
+Natural Language Processing: Hugging Face open models
+
+Text-to-Speech: Coqui TTS (open-source, multilingual)
+
+Data Sources
+
+IndiaCode.nic.in – IPC & Acts (Public Domain)
+
+MyScheme.gov.in – Government Open Data License (GODL)
+
+PRS India / NHRC – Rights & awareness material
+
+Database
+
+SQLite / Firebase (anonymous reports & metadata)
+
+🧠 System Architecture
+User (Voice/Text)
+      ↓
+Speech-to-Text (VOSK)
+      ↓
+NLP + IPC Knowledge Retrieval
+      ↓
+AI Validation & Categorization
+      ↓
+Text-to-Speech (Coqui TTS)
+      ↓
+User Response + Anonymous Report Storage
+
+🔐 Privacy & Ethics
+
+No personal data required
+
+Anonymous reporting by default
+
+Encrypted communication
+
+No legal advice — only guidance and awareness
+
+Complies with ethical AI principles and DPDP Act intent
+
+📊 Impact
+
+Empowers citizens regardless of literacy or language
+
+Increases legal awareness and civic participation
+
+Reduces fear in reporting sensitive issues
+
+Enables data-driven governance insights
+
+Designed for national-scale deployment
+
+⚠️ Challenges & Mitigation
+Challenge	Mitigation
+Fake reports	AI-based credibility & duplicate detection
+Language accuracy	Indic open-source datasets & fallback text
+Trust	Source-backed answers + transparency
+Scalability	Modular, lightweight backend
+🚀 Future Scope
+
+Integration with government grievance portals
+
+Advanced semantic search over legal datasets
+
+Admin dashboards for authorities and NGOs
+
+Regional language expansion
+
+Offline-first progressive web app (PWA)
+
+📂 Project Structure
+janmitra/
+│
+├── frontend/        # Bolt UI
+├── backend/
+│   ├── app.py       # Flask server
+│   ├── assistant/   # AI logic (STT, NLP, TTS)
+│   ├── data/        # IPC & scheme datasets
+│
+├── requirements.txt
+├── README.md
+
+🧪 Running the Project (Local)
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run backend
+python app.py
+
+
+Frontend runs separately via Bolt development environment.
+
+🏆 Use Case
+
+Hackathons & innovation challenges
+
+Civic-tech & governance projects
+
+Legal awareness platforms
+
+NGO or student-led social initiatives
+
+🤝 Team
+
+Developed by Team Janmitra
+Engineering students passionate about AI, governance, and social impact.
+
+📜 License
+
+This project uses only open-source tools and public-domain / open government datasets.
+Source attribution is maintained for all legal and civic information.
+
+⭐ Final Note
+
+Janmitra is not just a project — it’s a step toward inclusive, voice-driven governance.
+Built with empathy. Backed by data. Powered by AI.
